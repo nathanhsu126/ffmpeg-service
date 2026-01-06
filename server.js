@@ -198,6 +198,7 @@ app.post('/split-audio-base64', express.json({ limit: '100mb' }), async (req, re
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🎬 FFmpeg Service running on port ${PORT}`);
+  console.log(`📍 Listening on 0.0.0.0:${PORT}`);
 });
